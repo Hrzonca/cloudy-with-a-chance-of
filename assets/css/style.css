@@ -1,0 +1,7 @@
+header {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    background: linear-gradient(to bottom, green 0%, lightgreen 100%);
+}
