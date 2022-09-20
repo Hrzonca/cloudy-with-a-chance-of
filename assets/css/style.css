@@ -3,5 +3,5 @@ header {
     margin: 10px;
     text-align: center;
     font-size: 30px;
-    background: linear-gradient(to bottom, green 0%, lightgreen 100%);
+    background: linear-gradient(to bottom, #0066ff 0%, #33cc33 100%);
 }
