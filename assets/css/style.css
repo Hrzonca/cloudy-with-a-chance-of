@@ -31,6 +31,10 @@ main .weatherData {
     height: 200px
 }
 
+p {
+    display: block;
+}
+
 /* article, .databox, .userinput, .cityName, .inputcontainer, button {
     margin: 5px;
     padding: 5px;

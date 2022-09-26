@@ -13,64 +13,69 @@
     <header>What's the weather out there?</header>
 
     <section class="inputbox">
-    <section class="databox">Enter city:
-    <input type="text" class="userinput"></input>
-    </section> 
-    <section>Enter state:
-    <input type="text" class="userstate"></input>
-</section>    
-        <button class="searchbutton">Search</button>
-        <h2 class="cityName">--Seattle--</h2>
+        <section class="databox">City:
+            <input type="text" class="userinput"></input>
+        </section>
+    </section>
+    <button class="searchbutton">Search</button>
+    <h2 class="cityName">Seattle</h2>
     </section>
 
+    <!-- current day -->
     <main>
         <section class="weatherData">
-            <div class="displayicons"></div>
-            <div class="icons"></div>
-            <p class="weather" id="day1"></p>
-            <div class="image"><img src="" class="imgClass" id="img1" alt=""><img></div>
-            <p class="mintemp" id="day1min">min</p>
-            <p class="maxtemp" id="day1max">max</p>
+            <div class="displayicons">
+                <div class="icons"></div>
+                <div class="image"><img src="" class="imgClass" id="img1" alt=""><img></div>
+            </div>
+            <p class="temp">Temp:</p>
+            <p class="humidity">humidity</p>
+            <p class="wind">Wind: </p>
         </section>
 
         <section class="weatherData">
-            <div class="displayicons"></div>
-            <div class="icons"></div>
-            <p class="weather" id="day2"></p>
-            <div class="image"><img src="" class="imgClass" id="img2" alt=""><img></div>
-            <p class="mintemp" id="day2min">min</p>
-            <p class="maxtemp" id="day2max">max</p>
+            <div class="displayicons">
+                <div class="icons"></div>
+              <div class="image"><img src="" class="imgClass" id="img2" alt=""><img></div>
+            </div>
+            <p class="temp">Temp:</p>
+            <p class="humidity">humidity</p>
+            <p class="wind">Wind: </p>
         </section>
 
         <div class="weatherData">
-            <div class="displayicons"></div>
-            <div class="icons"></div>
-            <p class="weather" id="day3"></p>
-            <div class="image"><img src="" class="imgClass" id="img3" alt=""><img></div>
-            <p class="mintemp" id="day3min">min</p>
-            <p class="maxtemp" id="day3max">max</p>
+            <div class="displayicons">
+                <div class="icons"></div>
+                 <div class="image"><img src="" class="imgClass" id="img3" alt=""><img></div>
+        </div>
+            <p class="temp">Temp: </p>
+            <p class="humidity">Humidity: </p>
+            <p class="wind">Wind: </p>
         </div>
 
         <div class="weatherData">
-            <div class="displayicons"></div>
-            <div class="icons"></div>
-            <p class="weather" id="day4"></p>
-            <div class="image"><img src="" class="imgClass" id="img4" alt=""><img></div>
-            <p class="mintemp" id="day4min">min</p>
-            <p class="maxtemp" id="day4max">max</p>
+            <div class="displayicons">
+                <div class="icons"></div>
+             <div class="image"><img src="" class="imgClass" id="img4" alt=""><img></div>
+            </div>
+            <p class="temp">Temp:</p>
+            <p class="humidity">Humidity</p>
+            <p class="wind">Wind: </p>
         </div>
 
         <div class="weatherData">
-            <div class="displayicons"></div>
-            <div class="icons"></div>
-            <p class="weather" id="day5"></p>
+            <div class="displayicons">
+                <div class="icons"></div>
             <div class="image"><img src="" class="imgClass" id="img5" alt=""><img></div>
-            <p class="mintemp" id="day5min">min</p>
-            <p class="maxtemp" id="day5max">max</p>
+            </div>
+            <p class="temp">Temp:</p>
+            <p class="humidity">Humidity</p>
+            <p class="wind">Wind: </p>
         </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/script/script.js"></script>
 
 </body>
