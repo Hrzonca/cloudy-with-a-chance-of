@@ -15,63 +15,82 @@
     <section class="inputbox">
         <section class="databox">City:
             <input type="text" class="userinput"></input>
+            <button class="searchbutton">Search</button>
         </section>
     </section>
-    <button class="searchbutton">Search</button>
-    <h2 class="cityName">Seattle</h2>
+
+    <article class="card" id="currentday">
+        <h2 class="cityName">Seattle</h2>
+        <section class="weatherData">
+            <div class="displayicons">
+                <div class="icons"></div>
+                <div class="image"><img src="" class="imgClass" id="img" alt=""><img></div>
+            </div>
+            <section>
+                <p class="temp">Temp:</p>
+                <p class="humidity">Humidity</p>
+                <p class="wind">Wind: </p>
+                <p class="index">UV Index: <box class="color"></box>
+                </p>
+            </section>
+        </section>
+    </article>
+
+    <h3 class="hisory">Previous Searches</h3>
     </section>
 
-    <!-- current day -->
-    <main>
+    <main >
         <section class="weatherData">
             <div class="displayicons">
                 <div class="icons"></div>
                 <div class="image"><img src="" class="imgClass" id="img1" alt=""><img></div>
             </div>
-            <p class="temp">Temp:</p>
-            <p class="humidity">humidity</p>
-            <p class="wind">Wind: </p>
+            <section>
+                <p class="fiveTemp">Temp:</p>
+                <p class="fiveHumidity">Humidity</p>
+                <p class="fiveWind">Wind: </p>
+            </section>
         </section>
 
         <section class="weatherData">
             <div class="displayicons">
                 <div class="icons"></div>
-              <div class="image"><img src="" class="imgClass" id="img2" alt=""><img></div>
+                <div class="image"><img src="" class="imgClass" id="img2" alt=""><img></div>
             </div>
-            <p class="temp">Temp:</p>
-            <p class="humidity">humidity</p>
-            <p class="wind">Wind: </p>
+            <p class="fiveTemp">Temp:</p>
+            <p class="fiveHumidity">Humidity</p>
+            <p class="fiveWind">Wind: </p>
         </section>
 
-        <div class="weatherData">
+        <section class="weatherData">
             <div class="displayicons">
                 <div class="icons"></div>
-                 <div class="image"><img src="" class="imgClass" id="img3" alt=""><img></div>
-        </div>
-            <p class="temp">Temp: </p>
-            <p class="humidity">Humidity: </p>
-            <p class="wind">Wind: </p>
-        </div>
-
-        <div class="weatherData">
-            <div class="displayicons">
-                <div class="icons"></div>
-             <div class="image"><img src="" class="imgClass" id="img4" alt=""><img></div>
+                <div class="image"><img src="" class="imgClass" id="img3" alt=""><img></div>
             </div>
-            <p class="temp">Temp:</p>
-            <p class="humidity">Humidity</p>
-            <p class="wind">Wind: </p>
-        </div>
+            <p class="fiveTemp">Temp: </p>
+            <p class="fiveHumidity">Humidity: </p>
+            <p class="fiveWind">Wind: </p>
+        </section>
 
-        <div class="weatherData">
+        <section class="weatherData">
             <div class="displayicons">
                 <div class="icons"></div>
-            <div class="image"><img src="" class="imgClass" id="img5" alt=""><img></div>
+                <div class="image"><img src="" class="imgClass" id="img4" alt=""><img></div>
             </div>
-            <p class="temp">Temp:</p>
-            <p class="humidity">Humidity</p>
-            <p class="wind">Wind: </p>
-        </div>
+            <p class="fiveTemp">Temp:</p>
+            <p class="fiveHumidity">Humidity</p>
+            <p class="fiveWind">Wind: </p>
+        </section>
+
+        <section class="weatherData">
+            <div class="displayicons">
+                <div class="icons"></div>
+                <div class="image"><img src="" class="imgClass" id="img5" alt=""><img></div>
+            </div>
+            <p class="fiveTemp">Temp:</p>
+            <p class="fiveHumidity">Humidity</p>
+            <p class="fiveWind">Wind: </p>
+        </section>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

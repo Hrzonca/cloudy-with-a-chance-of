@@ -1,4 +1,25 @@
-# cloudy-with-a-chance-of
+# cloudy-with-a-chance-of-weatherapi
+
+Description 
+The objective of this project is to use the openweather api data to allow the users to see current and future weather of a city based on the user input. 
+
+Mine is not complete but and I am only turning it in incomplete for the chance to redo it. 
+
+
+Live link:
+
+Repo link: 
+
+The image below is what the user sees when they load the page.
+![homescreen.png](assets/images%20/homescreen.png)
+
+This image is after the user has input a city
+![userinput.png](assets/images%20/userinput.png)
+
+
+
+
+
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history

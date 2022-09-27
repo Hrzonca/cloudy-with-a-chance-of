@@ -14,7 +14,7 @@ button {
 }
 
 .inputbox,
-searchbutton {
+.searchbutton {
     display: block;
 }
 
@@ -28,11 +28,34 @@ main .weatherData {
     margin: 5px;
     background-color: antiquewhite;
     width: 300px;
-    height: 200px
+    height: 200px;
 }
 
 p {
+    text-align: center;
     display: block;
+    border-radius: 5px;
+    height: 25px;
+    width: 85px;
+    padding: 1px;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.displayicons {
+    padding: px;
+    margin: 3px;
+}
+
+#currentday {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background-color: #0066ff;
+    outline: 2px black;
+    max-width: 500px;
+
 }
 
 /* article, .databox, .userinput, .cityName, .inputcontainer, button {
