@@ -4,6 +4,7 @@ var fetchButton = document.querySelector('.searchbutton');
 var weatherData = document.querySelector("ul")
 const newName = document.querySelector(".userinput");
 const cityName = document.querySelector(".cityName");
+const previousCity = document.querySelector('.towns');
 //  var today = moment();
 //  $(".weatherData").text(today.format("dddd"));
 
@@ -14,12 +15,14 @@ function showWeather() {
     console.log(newName.value);
     console.log(cityName.value);
 
+    let searchCity = newName.value;
+
     fetch(queryURL)
         .then(response => {
             console.log("pulling data")
             return response.json();
         })
-       
+
         .then(data => {
             console.log('fetch response');
 
@@ -39,21 +42,24 @@ function showWeather() {
 
             console.log(data)
 
+            saveRecentSeaches(searchCity);
+
             document.getElementsByClassName("temp")[0].innerHTML = "Temp: " + data.main.temp + "°F";
             document.getElementsByClassName("humidity")[0].innerHTML = "Humidity: " + data.main.humidity + "%";
             document.getElementsByClassName("wind")[0].innerHTML = "Wind: " + data.wind.speed + "MPH";
             document.getElementsByClassName("displayicons")[0].innerHTML = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
-            })
+        })
+
 }
 
 fetchButton.addEventListener("click", showWeather);
 
 
-const getForcast = async(city)=>{
+const getForcast = async (city) => {
     const urlToFEtch = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
-    try{
+    try {
         const response = await fetch(urlToFEtch)
-        if(response.ok){
+        if (response.ok) {
             const forcastJsonResponse = await response.json();
             // console.log('==============below are forcast data======')
             // console.log(forcastJsonResponse);
@@ -61,47 +67,70 @@ const getForcast = async(city)=>{
             // console.log(list);
             return list;
         }
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
 
-const displayForcast = (list)=>{
+const displayForcast = (list) => {
     for (var i = 0; i < 5; i++) {
-        $(`#img${i+1}`).attr({
+        $(`#img${i + 1}`).attr({
             src: `http://openweathermap.org/img/wn/${list[i].weather[0].icon}@2x.png`,
             alt: 'weather icon'
         })
     }
     for (var i = 0; i < 5; i++) {
         document.getElementsByClassName("fiveTemp")[i].innerHTML = "Temp: " + list[i].main.temp + "°F";
-       
+
     }
 
     for (var i = 0; i < 5; i++) {
         document.getElementsByClassName("fiveHumidity")[i].innerHTML = "Humidity: " + list[i].main.humidity + "%";
-        
+
     }
 
     for (var i = 0; i < 5; i++) {
         document.getElementsByClassName("fiveWind")[i].innerHTML = "Wind: " + list[i].wind.speed + "MPH";
-       
+
     }
-      
+
 }
 
-const searchForcast=async()=>{
+const searchForcast = async () => {
     const list = await getForcast(city);
     displayForcast(list)
 }
 
-$(".searchbutton").on('click',(event)=>{
+$(".searchbutton").on('click', (event) => {
     event.preventDefault();
     city = $('.userinput').val();
     searchForcast()
 })
 
+// save, , pulling data
+let previousSearches = [];
+console.log(previousSearches);
 
+function saveRecentSeaches(searchCity) {
+    if (previousSearches.length > 4) {
+        previousSearches.shift();
+    }
+
+
+    previousSearches.push(searchCity);
+    console.log(previousSearches);
+    populateHistory();
+}
+
+function populateHistory() {
+    previousCity.innerText = '';
+    for (var i = 0; i < previousSearches.length; i++) {
+        console.log(previousSearches[i]);
+        let cityEl = document.createElement('li');
+        cityEl.innerText = previousSearches[i];
+        previousCity.append(cityEl);
+    }
+}
 
 
 
